@@ -27,14 +27,43 @@ else if(phrase5MotTxt.length >=1)
             longueurMots.push("".length);
             longueurMots.push("".length);
        }
-        else 
-        if(numMots == 2)
+        else if(numMots == 2)
             {
             longueurMots.push(phrase5Mot[0].length);
             longueurMots.push(phrase5Mot[1].length);
             longueurMots.push("".length);
             longueurMots.push("".length);
             longueurMots.push("".length);
+
+            let motUn;
+            let motDeux;
+            let motLong;
+            motUn= phrase5Mot.shift();
+            motDeux= phrase5Mot.shift();
+           
+
+            // chercher mot + long + court
+            //si motUn plus long
+            //sinon motDeux plus long
+            //sinon =
+            //alert
+
+            if (motUn.length > motDeux.length)
+            {
+                motLong = motUn
+                alert("le mot le plus long de la phrase: " + motLong);
+            }
+
+            else if (motDeux.length > motUn.length) 
+            {
+                motLong = motDeux
+                alert("le mot le plus long de la phrase: " + motLong);
+            }
+             
+            else {
+                alert("les mots sont de mêmes longueur")
+            }
+           
             } 
 
             else 
@@ -45,8 +74,26 @@ else if(phrase5MotTxt.length >=1)
                     longueurMots.push(phrase5Mot[2].length);
                     longueurMots.push("".length);
                     longueurMots.push("".length);
-                    // texte = phrase5Mot[0].length + ", " + phrase5Mot[1].length + phrase5Mot[2].length +  " , 0, 0";            
-                    // alert("Les longueurs des mots respectivement : " + texte);
+
+                    motTrois= phrase5Mot.shift();
+
+                    if (motUn.length > motDeux.length)
+                        {
+                            motLong = motUn
+                            alert("le mot le plus long de la phrase: " + motLong);
+                        }
+            
+                        else if (motDeux.length > motUn.length) 
+                        {
+                            motLong = motDeux
+                            alert("le mot le plus long de la phrase: " + motLong);
+                        }
+
+                        else if (motUn.lenght && motDeux.lenght < motTrois.lenght)
+                        {
+                            motLong = motTrois
+                            alert("le mot le plus long de la phrase: " + motLong);
+                        }
                 }
 
             else if (numMots == 4)
@@ -57,8 +104,6 @@ else if(phrase5MotTxt.length >=1)
                     longueurMots.push(phrase5Mot[2].length);
                     longueurMots.push(phrase5Mot[3].length);
                     longueurMots.push("".length);
-                    //texte = phrase5Mot[0].length + ", " + phrase5Mot[1].length + ", " +  phrase5Mot[2].length + ", " + phrase5Mot[3].length + " , 0";            
-                    //alert("Les longueurs des mots respectivement : " + texte);
                 }
                 else if (numMots == 5)
                     {
@@ -68,22 +113,17 @@ else if(phrase5MotTxt.length >=1)
                         longueurMots.push(phrase5Mot[2].length);
                         longueurMots.push(phrase5Mot[3].length);
                         longueurMots.push(phrase5Mot[4].length);
-                        //texte = phrase5Mot[0].length + ", " + phrase5Mot[1].length + ", " +  phrase5Mot[2].length + ", " + phrase5Mot[3].length + ", " + phrase5Mot[4].length;            
-                        //alert("Les longueurs des mots respectivement : " + texte);
                     }
 
 }
                           
 alert("Les longueurs des mots respectivement : " + longueurMots);
 
-// let longueurMots= [];
-// longueurMots.push(phrase5Mot[0].length);
-// longueurMots.push(phrase5Mot[1].length);
-// longueurMots.push(phrase5Mot[2].length);
-// longueurMots.push(phrase5Mot[3].length);
-// longueurMots.push(phrase5Mot[4].length);
+let motLong= 0;
+let motActuel= longueurMots.pop;
+motLong= longueurMots.pop 
 
-// let motLong=
+
 // let motCourt=
 
 // EXERCICE 2
